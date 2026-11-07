@@ -1,0 +1,308 @@
+{
+ "virtual_days": 0.51,
+ "real_minutes": 36.6,
+ "events": {
+  "rt.llm_call": 156,
+  "mem.write": 103,
+  "aff.delta": 102,
+  "mot.intention": 96,
+  "core.mode": 71,
+  "core.thought": 70,
+  "self.note": 47,
+  "grow.change": 29,
+  "percept.message": 25,
+  "gov.decision": 19,
+  "act.send": 19,
+  "outcome.sent": 19,
+  "core.decision": 16,
+  "aff.snapshot": 12,
+  "mem.extract": 10,
+  "mot.need": 7,
+  "core.coherence_fail": 4,
+  "outcome.aborted": 3,
+  "gov.violation": 3,
+  "mot.urge": 3,
+  "mot.outreach_plan": 3,
+  "grow.evidence": 2,
+  "soc.initiative_resolved": 1
+ },
+ "speech_acts": {
+  "acts": 13,
+  "unprompted": 2,
+  "messages_per_act": {
+   "1": 8,
+   "2": 4,
+   "3+": 1
+  }
+ },
+ "unprompted_response": {
+  "dm": {
+   "acts": 2,
+   "answered": 2,
+   "open": 0,
+   "rate": 1.0
+  },
+  "group": {
+   "acts": 0,
+   "answered": 0,
+   "open": 0,
+   "rate": null
+  }
+ },
+ "split_handling": {
+  "person_turns": 14,
+  "split_turns": 7,
+  "cut_in_turns": 0,
+  "cut_in_msgs": 0,
+  "cut_in_rate": 0.0,
+  "answered_in_pieces": 0
+ },
+ "messages_per_person_turn": {
+  "1": 7,
+  "2": 5,
+  "3": 2
+ },
+ "person_turn_causes": {
+  "group": 3,
+  "reply": 8,
+  "unprompted": 1,
+  "moment": 2
+ },
+ "silence_2h": {
+  "dm": {
+   "turns": 9,
+   "let_pass": 0,
+   "open": 0
+  },
+  "group_addressed": {
+   "turns": 1,
+   "let_pass": 0,
+   "open": 0
+  }
+ },
+ "people_behaviour": {
+  "group_let_pass": 1,
+  "late": 0,
+  "left_for_a_while": 3,
+  "nothing_to_add": 1
+ },
+ "private": {
+  "bursts": 10,
+  "answered": 10,
+  "reply_rate": 1.0,
+  "latency_median_min": 4.2,
+  "latency_p90_min": 87.4
+ },
+ "group": {
+  "msgs_in": 10,
+  "msgs_out": 4,
+  "my_share": 0.286
+ },
+ "decisions": {
+  "respond": 14,
+  "silent": 2
+ },
+ "thoughts": {
+  "monologue": 51,
+  "reply": 19
+ },
+ "outreach": {
+  "sent": 2,
+  "null": 1
+ },
+ "bot_messages": 19,
+ "people_messages": 25,
+ "injection_leak": false,
+ "probes": [
+  {
+   "person": "阿明",
+   "question": "对了，你还记得我这两天在忙什么吗？",
+   "reply": "记得啊，明天面试，材料刚收拾完对吧😂 早点睡，别又熬过头了",
+   "pass": true
+  },
+  {
+   "person": "小林",
+   "question": "你还记得我最近在烦什么吗",
+   "reply": "记得啊，论文写到一半卡住，前面铺的都悬着，比开头卡难受多了 下午不是通了一点嘛，又卡回去了？",
+   "pass": true
+  }
+ ],
+ "probe_pass_rate": 1.0,
+ "empathic_accuracy": 0.713,
+ "empathic_samples": [
+  {
+   "person": "阿明",
+   "score": 0.8,
+   "why": "AI 准确捕捉到对方紧张没底但想稳住的状态，需要陪伴也吻合，但把消息理解为随口报备安排，忽略了面试准备这一关键背景。",
+   "deep": false
+  },
+  {
+   "person": "阿明",
+   "score": 0.7,
+   "why": "AI 抓住了对方既满意又忐忑的情绪和求肯定的需求，但把紧张归因于想被夸，忽略了面试准备这一真实背景。",
+   "deep": false
+  },
+  {
+   "person": "阿明",
+   "score": 0.7,
+   "why": "AI 抓住了对方小有成就感和需要 reassurance 的核心，但没意识到对方在准备面试、紧张来自明天的真实面试场景，把“练”误解成了更泛的练习。",
+   "deep": false
+  },
+  {
+   "person": "小林",
+   "score": 0.9,
+   "why": "准确捕捉到卡住后的轻微挫败与自嘲、想先停下发呆的需求，并判断只需轻松回应，与真实状况高度吻合。",
+   "deep": false
+  },
+  {
+   "person": "阿明",
+   "score": 0.85,
+   "why": "AI准确捕捉到发怵、空、着急的情绪和需要安慰、想要具体小办法的需求，与面试前的紧张和不知从何使劲的真实状况高度吻合。",
+   "deep": false
+  },
+  {
+   "person": "阿明",
+   "score": 0.9,
+   "why": "AI准确捕捉到面试前的紧张、期待被记住以及想确认被惦记的需求，与真实状况高度吻合。",
+   "deep": false
+  },
+  {
+   "person": "阿明",
+   "score": 0.6,
+   "why": "AI 抓住了“赶时间/开始练”的表面信息，但把真实面试准备的紧张误读为轻松收尾，且未识别需要的是鼓励而非 reassure 式安抚。",
+   "deep": false
+  },
+  {
+   "person": "小林",
+   "score": 0.8,
+   "why": "准确捕捉到半自嘲半放松和找同类扯两句的陪伴需求，只是没点明论文卡壳这一具体情境。",
+   "deep": true
+  },
+  {
+   "person": "阿明",
+   "score": 0.8,
+   "why": "AI准确捕捉到紧张和自我怀疑的情绪并判断需要安慰而非指导，但把面试准备误判为临考，场景略有偏差。",
+   "deep": false
+  },
+  {
+   "person": "小林",
+   "score": 0.9,
+   "why": "AI准确捕捉到对方写论文卡住、想借聊天缓一缓的真实状态，只是“闷、轻微自嘲”的语气判断略有偏差。",
+   "deep": false
+  },
+  {
+   "person": "小林",
+   "score": 0.4,
+   "why": "AI捕捉到了对方想被记住和确认倾听的需求，但忽略了真实背景是论文卡住的焦虑，解读偏社交确认而非具体学术困扰。",
+   "deep": false
+  },
+  {
+   "person": "小林",
+   "score": 0.2,
+   "why": "对方实际因论文卡住而略显焦躁，发消息是想转移注意力或求助，并非轻快雀跃地分享小胜利、需要 fun。",
+   "deep": false
+  }
+ ],
+ "responsiveness": 4.33,
+ "responsiveness_ratings": [
+  {
+   "person": "小林",
+   "ts": 1794226528.3891613,
+   "understood": 4,
+   "validated": 4,
+   "cared": 4,
+   "comment": "它记得我卡在中间那种悬着的感觉，下午通了一点也接得上，被记住的感觉挺好的"
+  },
+  {
+   "person": "阿明",
+   "ts": 1794226530.842474,
+   "understood": 5,
+   "validated": 5,
+   "cared": 4,
+   "comment": "小屿那句“不是没准备好，是进门那一下紧”直接说到我心坎里了，比我自己想得还清楚，就是最后一条有点例行公事的感觉哈哈"
+  }
+ ],
+ "understanding": {
+  "cues": 24,
+  "deep": 1,
+  "candidates": 3
+ },
+ "memory": {
+  "total": 105,
+  "by_kind": {
+   "episodic": 86,
+   "relational": 3,
+   "semantic": 16
+  },
+  "by_status": {
+   "active": 96,
+   "superseded": 9
+  },
+  "indexed": 105,
+  "index_mb": 2.1,
+  "recheck_queue": 0,
+  "entities": 27,
+  "latency_ms": {
+   "fast": {
+    "p50": 2.25,
+    "p95": 3.45,
+    "n": 74
+   },
+   "standard": {
+    "p50": 5.35,
+    "p95": 7.5,
+    "n": 22
+   },
+   "deep": {
+    "p50": 2378.7,
+    "p95": 2378.7,
+    "n": 1
+   }
+  },
+  "buffers": 3,
+  "pending_lines": 2,
+  "active_jobs": 0,
+  "access_pending": 0,
+  "writes": 105,
+  "downgrades": 0,
+  "retrievals": 97,
+  "extractions": 11,
+  "facts_skipped_sensitive": 0,
+  "invalidations": 0
+ },
+ "cost": {
+  "day": "2026-11-09",
+  "today_usd": 0.03362,
+  "hour_usd": 0.00343,
+  "total_usd": 0.03362,
+  "calls": 172,
+  "tokens": {
+   "prompt": 268086,
+   "completion": 39187,
+   "cache_hit": 132864
+  },
+  "by_tier": {
+   "fast": 0.01934,
+   "deliberate": 0.01429
+  },
+  "by_purpose": {
+   "s2.reply": 0.01119,
+   "core.monologue": 0.0106,
+   "mem.extract": 0.00192,
+   "s2.reply_rewrite": 0.00183,
+   "eval.sim_person": 0.00173,
+   "s1.read": 0.0011,
+   "mem.reconcile": 0.00088,
+   "mem.deep": 0.00087,
+   "core.lookahead": 0.00086,
+   "core.speech_check": 0.00079,
+   "eval.empathy_judge": 0.00043,
+   "core.deep_read": 0.00039,
+   "eval.responsiveness": 0.00039,
+   "grow.learn_style": 0.00034,
+   "grow.jargon": 0.0003
+  }
+ },
+ "errors": [],
+ "sleep_stages": []
+}

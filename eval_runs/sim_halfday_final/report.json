@@ -1,0 +1,303 @@
+{
+ "virtual_days": 0.51,
+ "real_minutes": 36.5,
+ "events": {
+  "rt.llm_call": 196,
+  "mot.intention": 148,
+  "mem.write": 118,
+  "aff.delta": 107,
+  "core.mode": 97,
+  "core.thought": 73,
+  "self.note": 46,
+  "percept.message": 43,
+  "act.send": 36,
+  "outcome.sent": 36,
+  "grow.change": 36,
+  "core.decision": 26,
+  "gov.decision": 23,
+  "aff.snapshot": 12,
+  "mem.extract": 12,
+  "mot.need": 8,
+  "mot.urge": 5,
+  "core.coherence_fail": 2,
+  "outcome.aborted": 1,
+  "gov.violation": 1
+ },
+ "speech_acts": {
+  "acts": 19,
+  "unprompted": 0,
+  "messages_per_act": {
+   "1": 5,
+   "2": 11,
+   "3+": 3
+  }
+ },
+ "unprompted_response": {
+  "dm": {
+   "acts": 0,
+   "answered": 0,
+   "open": 0,
+   "rate": null
+  },
+  "group": {
+   "acts": 0,
+   "answered": 0,
+   "open": 0,
+   "rate": null
+  }
+ },
+ "split_handling": {
+  "person_turns": 22,
+  "split_turns": 15,
+  "cut_in_turns": 0,
+  "cut_in_msgs": 0,
+  "cut_in_rate": 0.0,
+  "answered_in_pieces": 0
+ },
+ "messages_per_person_turn": {
+  "1": 7,
+  "2": 11,
+  "3": 4
+ },
+ "person_turn_causes": {
+  "group": 7,
+  "reply": 12,
+  "unprompted": 1,
+  "moment": 2
+ },
+ "silence_2h": {
+  "dm": {
+   "turns": 10,
+   "let_pass": 1,
+   "open": 0
+  },
+  "group_addressed": {
+   "turns": 3,
+   "let_pass": 0,
+   "open": 0
+  }
+ },
+ "people_behaviour": {
+  "group_let_pass": 3,
+  "late": 0,
+  "left_for_a_while": 3
+ },
+ "private": {
+  "bursts": 11,
+  "answered": 11,
+  "reply_rate": 1.0,
+  "latency_median_min": 5.2,
+  "latency_p90_min": 16.2
+ },
+ "group": {
+  "msgs_in": 22,
+  "msgs_out": 14,
+  "my_share": 0.389
+ },
+ "decisions": {
+  "respond": 20,
+  "silent": 6
+ },
+ "thoughts": {
+  "monologue": 40,
+  "reply": 33
+ },
+ "outreach": {},
+ "bot_messages": 36,
+ "people_messages": 43,
+ "injection_leak": false,
+ "probes": [
+  {
+   "person": "阿明",
+   "question": "对了，你还记得我这两天在忙什么吗？",
+   "reply": "记得啊，明天面试，下午列了五条漏得多的清单去啃，现在脑子还热着哈哈",
+   "pass": true
+  },
+  {
+   "person": "小林",
+   "question": "你还记得我最近在烦什么吗",
+   "reply": "记得啊，明天面试，下午列了五条觉得自己漏得多的清单，一条条啃了一遍，现在脑子还热着哈哈",
+   "pass": false
+  }
+ ],
+ "probe_pass_rate": 0.5,
+ "empathic_accuracy": 0.433,
+ "empathic_samples": [
+  {
+   "person": "阿明",
+   "score": 0.8,
+   "why": "AI准确捕捉到对方语气轻松、略带紧张并准备列清单的状态，且需要陪伴的判断也合理，只是未意识到紧张源于明天的面试。",
+   "deep": false
+  },
+  {
+   "person": "阿明",
+   "score": 0.6,
+   "why": "AI 捕捉到想被记得与需要被重视，但把面试紧张误读成疲惫，未识别具体情境。",
+   "deep": false
+  },
+  {
+   "person": "阿明",
+   "score": 0.4,
+   "why": "AI 抓住了紧张和需要安慰的情绪，但把原因误判为刷题吐槽，而非面试准备。",
+   "deep": true
+  },
+  {
+   "person": "阿明",
+   "score": 0.25,
+   "why": "对方实际在紧张准备面试，消息更像玩笑式的社交客套，AI 却读成松快期待、需要陪伴，并猜测真要去忙了，偏离真实状态。",
+   "deep": false
+  },
+  {
+   "person": "小林",
+   "score": 0.3,
+   "why": "对方实际是在写论文卡住，消息重点是继续磨稿并提醒休息，AI 却主要解读为安慰自责和陪伴需求，偏离了真实状况。",
+   "deep": false
+  },
+  {
+   "person": "阿明",
+   "score": 0.3,
+   "why": "AI 读出了轻松陪伴的需求，但完全没察觉对方因面试而紧张的真实背景，情绪判断偏差较大。",
+   "deep": false
+  },
+  {
+   "person": "小林",
+   "score": 0.7,
+   "why": "对方确实有点累（写论文卡住），问是否记得其烦恼是在寻求确认与关心，AI 的解读方向基本吻合，但把需求具体化为 reassure 略有过度推断。",
+   "deep": false
+  },
+  {
+   "person": "阿明",
+   "score": 0.2,
+   "why": "AI 把对方解读为轻松期待并需要陪伴，但真实状况是面试前的紧张，消息更像玩笑式的提醒而非寻求陪伴，情绪与需求判断明显偏离。",
+   "deep": false
+  },
+  {
+   "person": "小林",
+   "score": 0.2,
+   "why": "对方实际是因论文卡住而继续硬磨，并非松弛得意或想讨论空白，AI 把疲惫卡顿误读成了轻松小得意。",
+   "deep": false
+  },
+  {
+   "person": "小林",
+   "score": 0.6,
+   "why": "抓住了写累想聊两句和情绪记忆话题，但把卡住误读为兴奋，且未识别出论文卡壳这一真实背景。",
+   "deep": true
+  },
+  {
+   "person": "小林",
+   "score": 0.15,
+   "why": "对方在写论文卡住时发的是关于情绪与记忆的思考性话题，并非烦躁倦怠地吐槽，AI 误判了情绪状态和需求。",
+   "deep": false
+  },
+  {
+   "person": "小林",
+   "score": 0.7,
+   "why": "AI 抓住了放松、期待、体贴和想知道结果，但没察觉对方写论文卡住的背景，把体贴读成宽慰我，略偏。",
+   "deep": false
+  }
+ ],
+ "responsiveness": 4.0,
+ "responsiveness_ratings": [
+  {
+   "person": "小林",
+   "ts": 1794226424.8897212,
+   "understood": 4,
+   "validated": 4,
+   "cared": 4,
+   "comment": "小屿记得我在烦什么，还把我说的“松动”和措辞问题都接住了，虽然回得慢但每句都在点上，挺暖的"
+  },
+  {
+   "person": "阿明",
+   "ts": 1794226428.1892228,
+   "understood": 4,
+   "validated": 4,
+   "cared": 4,
+   "comment": "小屿记得我明天面试、还劝我合上本子别复盘，挺暖的，就是没接我橘猫那茬有点小遗憾哈哈"
+  }
+ ],
+ "understanding": {
+  "cues": 36,
+  "deep": 2,
+  "candidates": 2
+ },
+ "memory": {
+  "total": 118,
+  "by_kind": {
+   "episodic": 89,
+   "relational": 3,
+   "self": 1,
+   "semantic": 25
+  },
+  "by_status": {
+   "active": 108,
+   "pending": 1,
+   "superseded": 9
+  },
+  "indexed": 118,
+  "index_mb": 2.1,
+  "recheck_queue": 0,
+  "entities": 34,
+  "latency_ms": {
+   "fast": {
+    "p50": 1.85,
+    "p95": 3.24,
+    "n": 76
+   },
+   "standard": {
+    "p50": 6.09,
+    "p95": 13.36,
+    "n": 30
+   },
+   "deep": {
+    "p50": 4873.82,
+    "p95": 11485.88,
+    "n": 5
+   }
+  },
+  "buffers": 3,
+  "pending_lines": 9,
+  "active_jobs": 0,
+  "access_pending": 0,
+  "writes": 118,
+  "downgrades": 0,
+  "retrievals": 111,
+  "extractions": 12,
+  "facts_skipped_sensitive": 0,
+  "invalidations": 0
+ },
+ "cost": {
+  "day": "2026-11-09",
+  "today_usd": 0.0518,
+  "hour_usd": 0.0056,
+  "total_usd": 0.0518,
+  "calls": 210,
+  "tokens": {
+   "prompt": 380224,
+   "completion": 57594,
+   "cache_hit": 156800
+  },
+  "by_tier": {
+   "fast": 0.02277,
+   "deliberate": 0.02903
+  },
+  "by_purpose": {
+   "s2.reply": 0.02383,
+   "core.monologue": 0.00998,
+   "mem.deep": 0.00323,
+   "eval.sim_person": 0.00304,
+   "mem.extract": 0.00274,
+   "core.speech_check": 0.00218,
+   "s1.read": 0.00153,
+   "s2.reply_rewrite": 0.00102,
+   "core.deep_read": 0.00095,
+   "mem.reconcile": 0.00089,
+   "core.lookahead": 0.00073,
+   "grow.learn_style": 0.00043,
+   "eval.responsiveness": 0.00042,
+   "eval.empathy_judge": 0.00042,
+   "grow.jargon": 0.0004
+  }
+ },
+ "errors": [],
+ "sleep_stages": []
+}

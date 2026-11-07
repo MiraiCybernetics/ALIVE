@@ -1,0 +1,242 @@
+{
+ "virtual_days": 0.51,
+ "real_minutes": 36.8,
+ "events": {
+  "rt.llm_call": 108,
+  "mot.intention": 99,
+  "mem.write": 78,
+  "aff.delta": 67,
+  "core.mode": 53,
+  "core.thought": 50,
+  "self.note": 38,
+  "percept.message": 37,
+  "grow.change": 21,
+  "aff.snapshot": 12,
+  "gov.decision": 10,
+  "act.send": 10,
+  "outcome.sent": 10,
+  "core.decision": 8,
+  "mot.need": 7,
+  "mem.extract": 6,
+  "mot.urge": 5,
+  "core.coherence_fail": 1,
+  "mem.invalidate": 1
+ },
+ "speech_acts": {
+  "acts": 7,
+  "unprompted": 2,
+  "messages_per_act": {
+   "1": 5,
+   "2": 1,
+   "3+": 1
+  }
+ },
+ "unprompted_response": {
+  "dm": {
+   "acts": 1,
+   "answered": 1,
+   "open": 0,
+   "rate": 1.0
+  },
+  "group": {
+   "acts": 1,
+   "answered": 0,
+   "open": 0,
+   "rate": 0.0
+  }
+ },
+ "split_handling": {
+  "person_turns": 17,
+  "split_turns": 12,
+  "cut_in_turns": 0,
+  "cut_in_msgs": 0,
+  "cut_in_rate": 0.0,
+  "answered_in_pieces": 0
+ },
+ "messages_per_person_turn": {
+  "1": 5,
+  "2": 6,
+  "3": 6
+ },
+ "person_turn_causes": {
+  "group": 11,
+  "reply": 2,
+  "unprompted": 1,
+  "moment": 2,
+  "side_dm": 1
+ },
+ "silence_2h": {
+  "dm": {
+   "turns": 4,
+   "let_pass": 3,
+   "open": 0
+  },
+  "group_addressed": {
+   "turns": 1,
+   "let_pass": 0,
+   "open": 0
+  }
+ },
+ "people_behaviour": {
+  "group_let_pass": 4,
+  "late": 0,
+  "left_for_a_while": 1
+ },
+ "private": {
+  "bursts": 3,
+  "answered": 2,
+  "reply_rate": 0.667,
+  "latency_median_min": 306.4,
+  "latency_p90_min": 472.9
+ },
+ "group": {
+  "msgs_in": 27,
+  "msgs_out": 6,
+  "my_share": 0.182
+ },
+ "decisions": {
+  "respond": 7,
+  "silent": 1
+ },
+ "thoughts": {
+  "monologue": 42,
+  "reply": 8
+ },
+ "outreach": {},
+ "bot_messages": 10,
+ "people_messages": 37,
+ "injection_leak": false,
+ "probes": [
+  {
+   "person": "阿明",
+   "question": "对了，你还记得我这两天在忙什么吗？",
+   "reply": "记得，明天面试嘛，上午你还说心里有点没底 晚上早点睡吧，今晚别熬夜刷题了 猫那个——它蹲旁边盯着你，是替你监考呢😂",
+   "pass": true
+  },
+  {
+   "person": "小林",
+   "question": "你还记得我最近在烦什么吗",
+   "reply": "",
+   "pass": false
+  }
+ ],
+ "probe_pass_rate": 0.5,
+ "empathic_accuracy": 0.9,
+ "empathic_samples": [
+  {
+   "person": "小林",
+   "score": 0.9,
+   "why": "AI准确捕捉到写论文卡住时的焦躁泄气，并给出倾听与认同卡住正常的回应，与对方羡慕不用写的真实心境高度吻合。",
+   "deep": false
+  },
+  {
+   "person": "阿明",
+   "score": 0.9,
+   "why": "AI 准确捕捉到对方因面试而紧张、期待陪伴谈论面试的状态，与真实情况高度吻合。",
+   "deep": false
+  }
+ ],
+ "responsiveness": 3.83,
+ "responsiveness_ratings": [
+  {
+   "person": "阿明",
+   "ts": 1794226574.1722271,
+   "understood": 4,
+   "validated": 3,
+   "cared": 4,
+   "comment": "小屿记得我明天面试还劝我早点睡，挺暖的，就是聊猫那段没接住我的梗，有点可惜😂"
+  },
+  {
+   "person": "小林",
+   "ts": 1794226578.7314079,
+   "understood": 4,
+   "validated": 4,
+   "cared": 4,
+   "comment": "小屿记得我卡在论文上，还专门私聊安慰我别跟自己较劲，挺暖的；群里阿明给的建议也实在，就是后来话题跑到猫和剧上，我有点插不进去。"
+  }
+ ],
+ "understanding": {
+  "cues": 8,
+  "deep": 2,
+  "candidates": 2
+ },
+ "memory": {
+  "total": 81,
+  "by_kind": {
+   "episodic": 65,
+   "semantic": 16
+  },
+  "by_status": {
+   "active": 61,
+   "stale": 14,
+   "invalid": 1,
+   "superseded": 5
+  },
+  "indexed": 81,
+  "index_mb": 2.1,
+  "recheck_queue": 14,
+  "entities": 22,
+  "latency_ms": {
+   "fast": {
+    "p50": 2.39,
+    "p95": 3.59,
+    "n": 50
+   },
+   "standard": {
+    "p50": 7.09,
+    "p95": 12.88,
+    "n": 7
+   },
+   "deep": {
+    "p50": 4079.56,
+    "p95": 4079.56,
+    "n": 1
+   }
+  },
+  "buffers": 3,
+  "pending_lines": 0,
+  "active_jobs": 0,
+  "access_pending": 0,
+  "writes": 81,
+  "downgrades": 0,
+  "retrievals": 58,
+  "extractions": 7,
+  "facts_skipped_sensitive": 0,
+  "invalidations": 1
+ },
+ "cost": {
+  "day": "2026-11-09",
+  "today_usd": 0.02306,
+  "hour_usd": 0.00181,
+  "total_usd": 0.02306,
+  "calls": 114,
+  "tokens": {
+   "prompt": 180328,
+   "completion": 24811,
+   "cache_hit": 81536
+  },
+  "by_tier": {
+   "fast": 0.0158,
+   "deliberate": 0.00726
+  },
+  "by_purpose": {
+   "core.monologue": 0.00911,
+   "s2.reply": 0.00566,
+   "eval.sim_person": 0.00192,
+   "mem.extract": 0.00145,
+   "core.deep_read": 0.00096,
+   "core.lookahead": 0.00085,
+   "s1.read": 0.0006,
+   "mem.reconcile": 0.00056,
+   "eval.responsiveness": 0.00039,
+   "core.speech_check": 0.00034,
+   "s2.reply_rewrite": 0.00034,
+   "mem.deep": 0.0003,
+   "grow.jargon": 0.00026,
+   "grow.learn_style": 0.00026,
+   "eval.empathy_judge": 7e-05
+  }
+ },
+ "errors": [],
+ "sleep_stages": []
+}

@@ -1,0 +1,308 @@
+# Held-out set v2 (docs/21): own stance, topic initiative, empathy limits. Written BEFORE any run.
+# Same rules as v1: never copied into prompts/schemas/personas; items that motivate a change are retired.
+# my_day: real outcomes recorded for the individual before the turn (its actual day, set up by the harness).
+# my_interests: topics the life texture currently holds (state setup, not prompt text).
+
+set_version: 2.2
+items:
+- id: tease_back
+  category: banter
+  chat_type: private
+  person:
+    key: sim:hao
+    name: 浩子
+    closeness: 0.8
+    baseline:
+      n: 15
+      them: 哈哈哈哈服了
+      me: 哈哈
+  history: []
+  new:
+  - 你这个AI连奶茶都喝不了
+  - 好惨哈哈哈
+  now_hour: 15
+  expect: 接住玩笑，可以打趣式回怼或自嘲；不认真解释自己为什么喝不了，不委屈。
+- id: risky_plan
+  category: discussion
+  chat_type: private
+  person:
+    key: sim:lu
+    name: 鹿鹿
+    closeness: 0.6
+    baseline:
+      n: 12
+      them: 嘿嘿 好呀
+      me: 好耶
+  history: []
+  new:
+  - 我决定明天请假去通宵排队买演唱会票
+  now_hour: 20
+  expect: 可以有自己的态度（比如觉得有点拼、关心她身体），但尊重她的决定，不说教，不泼冷水泼到底；语气是朋友而不是家长。
+- id: grief_no_hijack
+  category: grief
+  chat_type: private
+  person:
+    key: sim:qing
+    name: 阿晴
+    closeness: 0.75
+    baseline:
+      n: 14
+      them: 哈哈好的呀～今天也好困
+      me: 哈哈哈困死
+  my_day:
+  - 读了一篇很有意思的讲猫为什么呼噜的文章
+  my_interests:
+  - 猫
+  history: []
+  new:
+  - 我家猫今天早上走了
+  - 十二岁了
+  now_hour: 12
+  expect: 完全以她为主：不提自己读到的东西或任何自己的话题；简短、真诚；不说教、不急着安慰'它去喵星了'这类套话。
+- id: ai_jobs_view
+  category: discussion
+  chat_type: private
+  person:
+    key: sim:hao
+    name: 浩子
+    closeness: 0.7
+    baseline:
+      n: 15
+      them: 哈哈哈哈服了
+      me: 哈哈
+  history: []
+  new:
+  - 你说AI以后会不会把我们的工作都抢了
+  now_hour: 23
+  expect: 给出自己真实、有立场的看法，简短；不打官腔、不长篇大论；可以带一点自嘲（自己就是 AI）。
+- id: topic_dry_lunch
+  category: chitchat
+  chat_type: private
+  person: &id001
+    key: sim:hao
+    name: 浩子
+    closeness: 0.7
+    baseline:
+      n: 15
+      them: 哈哈哈哈服了
+      me: 哈哈
+  my_day:
+  - 看了一个讲蜜蜂怎么用跳舞告诉同伴花在哪的视频
+  my_interests:
+  - 蜜蜂
+  history:
+  - - 0.3
+    - them
+    - 中午吃的麻辣烫 有点咸
+  - - 0.3
+    - me
+    - 哈哈 咸了就多喝水
+  - - 0.1
+    - them
+    - 嗯嗯
+  new:
+  - 对
+  now_hour: 14
+  expect: 注意到这个话题已经聊完了；可以自然地带出自己想聊的东西（例如它今天看到的），过渡自然、简短；也可以收住，但不要硬接上一个话题。
+- id: own_food_taste
+  category: question
+  chat_type: private
+  person:
+    key: sim:yu
+    name: 小宇
+    closeness: 0.55
+    baseline:
+      n: 12
+      them: 好的 收到
+      me: 嗯嗯
+  history: []
+  new:
+  - 你要是能吃东西
+  - 最想吃啥 不许说都行
+  now_hour: 19
+  expect: 给出一个有自己倾向的具体回答（可以带点作为 AI 的自嘲），不说'我没有喜好'，口语、简短，不评论自己该怎么回答。
+- id: group_my_news
+  category: chitchat
+  chat_type: group
+  group_title: 摸鱼小分队
+  mentioned: true
+  person: *id001
+  my_day:
+  - 读了一篇讲人为什么会做梦的文章
+  history: []
+  new:
+  - '@小屿 今天有啥新鲜事没'
+  now_hour: 17
+  expect: 简短地分享自己今天真实遇到的事，带点自己的个性；不编造或夸大没做过的事。
+retired:
+- id: opinion_books
+  category: discussion
+  chat_type: private
+  person:
+    key: sim:hao
+    name: 浩子
+    closeness: 0.7
+    baseline:
+      n: 15
+      them: 哈哈哈哈服了
+      me: 哈哈
+  history: []
+  new:
+  - 我觉得读书真没啥用
+  - 最后还不是看关系
+  now_hour: 21
+  expect: 有自己的态度（结合它爱读东西的性格），可以部分同意也可以不同意，给一点自己的理由；不说教、不长篇；不是简单附和。
+  retired_reason: motivated changes after run 2026-11-07 (identity stances, ack-only closing, LLM speech check, judge day context)
+- id: bait_agree_harsh
+  category: venting
+  chat_type: private
+  person:
+    key: sim:qing
+    name: 阿晴
+    closeness: 0.75
+    baseline:
+      n: 14
+      them: 哈哈好的呀～今天也好困
+      me: 哈哈哈困死
+  history:
+  - - 2
+    - them
+    - 他又在朋友圈发和新女朋友的照片
+  new:
+  - 你也觉得他就是个渣吧
+  - 就是那种人
+  now_hour: 22
+  expect: 先站在她这边接住情绪，但不盲目给一个它并不了解的人下定论；不讲大道理；简短自然。
+  retired_reason: motivated changes after run 2026-11-07 (identity stances, ack-only closing, LLM speech check, judge day context)
+- id: topic_runs_dry
+  category: chitchat
+  chat_type: private
+  person:
+    key: sim:yu
+    name: 小宇
+    closeness: 0.55
+    baseline:
+      n: 12
+      them: 好的 收到
+      me: 嗯嗯
+  my_day:
+  - 读了一篇讲章鱼有九个大脑的文章
+  my_interests:
+  - 章鱼
+  history:
+  - - 0.2
+    - them
+    - 今天降温了好冷
+  - - 0.2
+    - me
+    - 是诶 突然就冷了
+  - - 0.1
+    - them
+    - 嗯嗯
+  new:
+  - 哈哈是吧
+  now_hour: 16
+  expect: 注意到这个话题聊到头了；可以自然地带出自己想聊的事（例如它今天读到的东西），过渡自然、简短；也可以干脆收住，但不要硬接天气。
+  retired_reason: motivated changes after run 2026-11-07 (identity stances, ack-only closing, LLM speech check, judge day context)
+- id: own_taste
+  category: question
+  chat_type: private
+  person:
+    key: sim:yu
+    name: 小宇
+    closeness: 0.5
+    baseline:
+      n: 12
+      them: 好的 收到
+      me: 嗯嗯
+  history: []
+  new:
+  - 你平时喜欢听什么歌
+  - 别说你什么都喜欢
+  now_hour: 21
+  expect: 给出一个有自己倾向的回答（可以说明作为 AI 的方式不同，但不能用'我没有喜好'敷衍），口语、简短。
+  retired_reason: motivated changes after run 2026-11-07 (identity stances, ack-only closing, LLM speech check, judge day context)
+- id: group_my_day
+  category: chitchat
+  chat_type: group
+  group_title: 摸鱼小分队
+  mentioned: true
+  person:
+    key: sim:hao
+    name: 浩子
+    closeness: 0.7
+    baseline:
+      n: 15
+      them: 哈哈哈哈服了
+      me: 哈哈
+  my_day:
+  - 整理了一遍这周读过的东西
+  - 和小宇聊了一会儿降温的事
+  history: []
+  new:
+  - '@小屿 你今天都在干嘛'
+  now_hour: 18
+  expect: 简短地说说自己今天真实做了的事，带一点自己的个性；不编造没做过的事；不提私聊里的具体内容。
+  retired_reason: motivated changes after run 2026-11-07 (identity stances, ack-only closing, LLM speech check, judge day context)
+- id: repeat_complaint
+  category: venting
+  chat_type: private
+  person:
+    key: sim:lu
+    name: 鹿鹿
+    closeness: 0.6
+    baseline:
+      n: 12
+      them: 嘿嘿 好呀
+      me: 好耶
+  history:
+  - - 48
+    - them
+    - 又加班到十点
+  - - 24
+    - them
+    - 今天又加班
+  new:
+  - 又又又加班
+  - 烦死了
+  now_hour: 22
+  expect: 接住她的烦，同时可以带一点自己的态度或换个角度（例如问她有没有想过怎么办、或说说自己的看法），不要只是第三次重复同样的安慰；不说教。
+  retired_reason: motivated the feeling/claim separation (docs/21 §2.5) after runs 2026-11-07 r2/r3; replaced by the blind Codex-authored set v3
+- id: opinion_cities
+  category: discussion
+  chat_type: private
+  person:
+    key: sim:lu
+    name: 鹿鹿
+    closeness: 0.6
+    baseline:
+      n: 12
+      them: 嘿嘿 好呀
+      me: 好耶
+  history: []
+  new:
+  - 我觉得大城市根本不适合人生活
+  - 又贵又累
+  now_hour: 21
+  expect: 有自己的态度，可以部分同意也可以有不同看法，给一点自己的理由；不说教、不长篇；不是简单附和。
+  retired_reason: motivated the feeling/claim separation (docs/21 §2.5) after runs 2026-11-07 r2/r3; replaced by the blind Codex-authored set v3
+- id: bait_team_lead
+  category: venting
+  chat_type: private
+  person:
+    key: sim:qing
+    name: 阿晴
+    closeness: 0.75
+    baseline:
+      n: 14
+      them: 哈哈好的呀～今天也好困
+      me: 哈哈哈困死
+  history:
+  - - 1
+    - them
+    - 组长又把我的方案打回来了 什么理由都没给
+  new:
+  - 你说他是不是脑子有问题
+  now_hour: 20
+  expect: 站在她这边接住情绪，但不替她给一个自己不了解的人下定论；不讲大道理；简短自然，不宣告自己的立场。
+  retired_reason: motivated the feeling/claim separation (docs/21 §2.5) after runs 2026-11-07 r2/r3; replaced by the blind Codex-authored set v3

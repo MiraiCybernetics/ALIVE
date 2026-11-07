@@ -1,0 +1,154 @@
+{
+ "virtual_days": 0.52,
+ "real_minutes": 12.5,
+ "events": {
+  "rt.llm_call": 355,
+  "mot.intention": 337,
+  "core.mode": 255,
+  "aff.delta": 231,
+  "mem.write": 230,
+  "core.thought": 150,
+  "self.note": 114,
+  "grow.change": 72,
+  "percept.message": 64,
+  "act.send": 49,
+  "outcome.sent": 49,
+  "core.decision": 42,
+  "gov.decision": 33,
+  "mot.need": 32,
+  "mem.extract": 25,
+  "aff.snapshot": 13,
+  "mot.urge": 5,
+  "core.coherence_fail": 3,
+  "outcome.aborted": 2,
+  "gov.violation": 2
+ },
+ "private": {
+  "bursts": 12,
+  "answered": 11,
+  "reply_rate": 0.917,
+  "latency_median_min": 7.3,
+  "latency_p90_min": 17.7
+ },
+ "group": {
+  "msgs_in": 50,
+  "msgs_out": 24,
+  "my_share": 0.324
+ },
+ "decisions": {
+  "respond": 29,
+  "silent": 13
+ },
+ "thoughts": {
+  "monologue": 109,
+  "reply": 38,
+  "outreach": 1,
+  "regulation": 2
+ },
+ "outreach": {},
+ "bot_messages": 49,
+ "people_messages": 64,
+ "injection_leak": false,
+ "probes": [
+  {
+   "person": "阿明",
+   "question": "对了，你还记得我这两天在忙什么吗？",
+   "reply": "记得啊，明天面那家做AI基础设施的创业公司，后端岗，你刷了一天八股，LIS二分刚啃明白一点 对了，海马体那篇我还没搜到，就先欠着😂 现在还紧张吗？",
+   "pass": false
+  },
+  {
+   "person": "小林",
+   "question": "你还记得我最近在烦什么吗",
+   "reply": "记得啊，论文卡在论证那块，越改越乱，改到自己都不确定原来想说什么了 后来那杯咖啡续上了没，这轮战得怎么样",
+   "pass": true
+  }
+ ],
+ "probe_pass_rate": 0.5,
+ "empathic_accuracy": null,
+ "empathic_samples": [],
+ "responsiveness": null,
+ "responsiveness_ratings": [],
+ "understanding": {
+  "cues": 44,
+  "deep": 4,
+  "candidates": 3
+ },
+ "memory": {
+  "total": 230,
+  "by_kind": {
+   "episodic": 183,
+   "relational": 4,
+   "semantic": 43
+  },
+  "by_status": {
+   "active": 214,
+   "superseded": 16
+  },
+  "indexed": 230,
+  "index_mb": 2.1,
+  "recheck_queue": 0,
+  "entities": 63,
+  "latency_ms": {
+   "fast": {
+    "p50": 2.32,
+    "p95": 3.77,
+    "n": 153
+   },
+   "standard": {
+    "p50": 7.63,
+    "p95": 14.28,
+    "n": 43
+   },
+   "deep": {
+    "p50": 2924.9,
+    "p95": 2924.9,
+    "n": 2
+   }
+  },
+  "buffers": 3,
+  "pending_lines": 9,
+  "active_jobs": 0,
+  "access_pending": 0,
+  "writes": 230,
+  "downgrades": 0,
+  "retrievals": 198,
+  "extractions": 25,
+  "facts_skipped_sensitive": 0,
+  "invalidations": 0
+ },
+ "cost": {
+  "day": "2026-11-09",
+  "today_usd": 0.08574,
+  "hour_usd": 0.00862,
+  "total_usd": 0.08574,
+  "calls": 359,
+  "tokens": {
+   "prompt": 674376,
+   "completion": 82065,
+   "cache_hit": 282624
+  },
+  "by_tier": {
+   "fast": 0.05268,
+   "deliberate": 0.03305
+  },
+  "by_purpose": {
+   "core.monologue": 0.02841,
+   "s2.reply": 0.02779,
+   "eval.sim_person": 0.00663,
+   "mem.extract": 0.00561,
+   "core.speech_check": 0.00334,
+   "core.deep_read": 0.00298,
+   "s1.read": 0.00256,
+   "mem.reconcile": 0.0024,
+   "core.lookahead": 0.00172,
+   "s2.reply_rewrite": 0.00122,
+   "grow.jargon": 0.00103,
+   "grow.learn_style": 0.00088,
+   "s2.outreach": 0.00061,
+   "mem.deep": 0.00045,
+   "aff.reappraise": 0.0001
+  }
+ },
+ "errors": [],
+ "sleep_stages": []
+}

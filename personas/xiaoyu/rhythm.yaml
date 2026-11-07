@@ -1,0 +1,7 @@
+timezone: Asia/Shanghai
+# 平时的作息：每晚实际几点睡、几点起是抽样（docs/04 §3.3），这里是均值
+wake: "07:40"
+sleep: "23:40"
+weekend_shift_hours: 0.75     # 周末晚睡晚起（平均推迟，每个周末夜晚各抽一次）
+circadian_peak_hour: 15.5
+active_hours: ["09:00-12:00", "14:00-18:00", "20:00-23:00"]   # 习惯的活跃时段：安排空档时的轻微偏好

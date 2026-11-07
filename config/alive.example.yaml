@@ -1,0 +1,67 @@
+# ALIVE configuration example. Copy to config/alive.yaml and edit.
+# Every key is optional; defaults live in alive/config.py and next to the code that uses them.
+# Env overrides: ALIVE__SECTION__KEY=value  (e.g. ALIVE__LLM__RPS=3)
+
+persona: personas/xiaoyu
+data_dir: ~/.local/share/alive/{persona_name}     # must be on a Linux-native filesystem (not /mnt/c)
+timezone: Asia/Shanghai
+log_level: INFO
+
+clock:
+  kind: real            # real | scaled (accelerated, for simulation) | manual (tests)
+  scale: 60
+
+llm:
+  secrets_file: .secrets/LLM.txt     # 3 lines: base_url, api_key, model   (or set providers.main.*)
+  rps: 5
+  tiers:
+    fast:       {model: deepseek-flash, thinking: disabled, concurrency: 8}
+    deliberate: {model: deepseek-flash, reasoning_effort: low, concurrency: 4}
+    deep:       {model: deepseek-v4-pro, reasoning_effort: high, concurrency: 2}
+  pricing:   # USD per 1M tokens - set to your provider's real prices
+    deepseek-flash:  {input_miss: 0.14, input_hit: 0.028, output: 0.28}
+    deepseek-v4-pro: {input_miss: 0.55, input_hit: 0.14, output: 2.2}
+
+embedder: {kind: hashing, dim: 512}   # or {kind: fastembed, model: BAAI/bge-small-zh-v1.5}
+
+owner:
+  person_keys: ["cli:owner", "telegram:123456789"]   # channel:sender_id of the owner(s)
+
+channels:
+  - {kind: cli, name: cli}
+  # - {kind: telegram, name: telegram, token_env: TELEGRAM_BOT_TOKEN}
+  # - {kind: onebot, name: qq, ws_url: "ws://127.0.0.1:3001", access_token: ""}
+
+governance:
+  budget: {daily_usd: 2.0, weekly_usd: 12.0}
+  disclosure: {jurisdiction: cn}      # cn: remind every 2h of continuous use; ny: 3h; off
+  # safety only: strangers need pairing, opt-out is final, high dependency risk stops initiatives; the fuse trips
+  # on inhuman bursts (a stuck loop). There are no per-day quotas, minimum gaps or quiet-hour windows.
+  initiative: {require_paired: true, fuse_burst: 5, fuse_window_min: 10}
+
+# when I speak or reach out on my own is a state-dependent random process (alive/core/initiative.py, docs/05 §5.6)
+initiative:
+  base_per_h: 1.2        # intensity scale (a temperament knob, not a count)
+  refractory_h: 3.0      # how quickly the "I just said something" inhibition fades (scaled by closeness, texture)
+
+# reading the air (docs/07 §3, ADR-0007): when I look at a space, how I take a batch in, my pace. All are draws
+# from state-dependent distributions; these are medians / scales, not fixed numbers.
+social:
+  attention:
+    enabled: true            # false: always "looking" (no notice latency) -- for debugging only
+    priority_median_s: 270   # a line to me from the closest people: dealt with in ~4.5 min (x e^{4.3 (0.9 - closeness)})
+    check_median_s: 360      # my next look at a shared space
+    linger_spoke_s: 240      # after I speak I stay a while with the chat open
+  gate:
+    air_weights: {}          # override air-reading terms, e.g. {bystanders: -0.7, closing: -4.0}
+  delay:
+    reaction_median_s: 4.0   # already looking: until I start typing (LogNormal, sigma 0.9)
+    type_cjk_mean: 4.0       # CJK chars/s; today's speed ~ Gamma(mean, cv 0.15), drawn once a day
+  max_segments: 8            # technical ceiling; how many messages I send is drawn (initiative.message_count)
+
+mind:
+  autonomy_per_h: 10     # hazard scale for acting on my own; energy, arousal, texture, budget modulate it
+  monologue_per_h: 5
+  monologue_tier: fast
+
+http: {enabled: true, host: 127.0.0.1, port: 8765, token: null}

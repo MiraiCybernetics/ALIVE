@@ -1,0 +1,41 @@
+# secrets: model endpoint and key (.secrets/LLM.txt), bot tokens
+.secrets/
+.env
+.env.*
+*.key
+*.pem
+
+# local config (copy from config/alive.example.yaml)
+config/alive.yaml
+config/*.local.yaml
+
+# python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# runtime data (normally under data_dir, outside the repo)
+data/
+*.db
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite3
+logs/
+
+# editors / OS
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db

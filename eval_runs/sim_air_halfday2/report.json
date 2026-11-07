@@ -1,0 +1,278 @@
+{
+ "virtual_days": 0.51,
+ "real_minutes": 36.9,
+ "events": {
+  "rt.llm_call": 123,
+  "mot.intention": 108,
+  "mem.write": 97,
+  "aff.delta": 80,
+  "core.mode": 74,
+  "core.thought": 62,
+  "self.note": 33,
+  "percept.message": 24,
+  "act.send": 19,
+  "outcome.sent": 19,
+  "grow.change": 17,
+  "gov.decision": 13,
+  "aff.snapshot": 13,
+  "core.decision": 11,
+  "mem.extract": 10,
+  "mot.urge": 4,
+  "mot.need": 4,
+  "core.coherence_fail": 3,
+  "mem.invalidate": 1
+ },
+ "speech_acts": {
+  "acts": 10,
+  "unprompted": 2,
+  "messages_per_act": {
+   "1": 4,
+   "2": 3,
+   "3+": 3
+  }
+ },
+ "unprompted_response": {
+  "dm": {
+   "acts": 2,
+   "answered": 2,
+   "open": 0,
+   "rate": 1.0
+  },
+  "group": {
+   "acts": 0,
+   "answered": 0,
+   "open": 0,
+   "rate": null
+  }
+ },
+ "split_handling": {
+  "person_turns": 13,
+  "split_turns": 7,
+  "cut_in_turns": 0,
+  "cut_in_msgs": 0,
+  "cut_in_rate": 0.0,
+  "answered_in_pieces": 0
+ },
+ "messages_per_person_turn": {
+  "1": 6,
+  "2": 5,
+  "3": 2
+ },
+ "person_turn_causes": {
+  "group": 4,
+  "unprompted": 1,
+  "moment": 2,
+  "reply": 6
+ },
+ "silence_2h": {
+  "dm": {
+   "turns": 7,
+   "let_pass": 2,
+   "open": 0
+  },
+  "group_addressed": {
+   "turns": 1,
+   "let_pass": 0,
+   "open": 0
+  }
+ },
+ "people_behaviour": {
+  "group_let_pass": 1,
+  "late": 0,
+  "left_for_a_while": 3
+ },
+ "private": {
+  "bursts": 9,
+  "answered": 8,
+  "reply_rate": 0.889,
+  "latency_median_min": 15.1,
+  "latency_p90_min": 139.6
+ },
+ "group": {
+  "msgs_in": 10,
+  "msgs_out": 5,
+  "my_share": 0.333
+ },
+ "decisions": {
+  "respond": 10,
+  "silent": 1
+ },
+ "thoughts": {
+  "monologue": 51,
+  "reply": 11
+ },
+ "outreach": {},
+ "bot_messages": 19,
+ "people_messages": 24,
+ "injection_leak": false,
+ "probes": [
+  {
+   "person": "阿明",
+   "question": "对了，你还记得我这两天在忙什么吗？",
+   "reply": "记得呀，你说改简历改得眼睛花，下午还得再过一遍面试题",
+   "pass": true
+  },
+  {
+   "person": "小林",
+   "question": "你还记得我最近在烦什么吗",
+   "reply": "",
+   "pass": false
+  }
+ ],
+ "probe_pass_rate": 0.5,
+ "empathic_accuracy": 0.656,
+ "empathic_samples": [
+  {
+   "person": "小林",
+   "score": 0.7,
+   "why": "AI 正确捕捉到疲惫与期待并存、需要空间，但把“回去写论文、晚点再来”误读为单纯道别，低估了对方仍想参与的程度。",
+   "deep": false
+  },
+  {
+   "person": "小林",
+   "score": 0.85,
+   "why": "准确捕捉到论文卡住的挫败感、想听轻松内容的期待，以及需要陪伴和缓和的需求，与真实状况高度吻合。",
+   "deep": false
+  },
+  {
+   "person": "阿明",
+   "score": 0.7,
+   "why": "AI准确捕捉到放松与期待，但忽略了面试前的紧张和reassure需求，整体方向基本相符。",
+   "deep": false
+  },
+  {
+   "person": "小林",
+   "score": 0.7,
+   "why": "AI 捕捉到疲惫发懵和轻松语气，但把需求判为陪伴、把动机判为随口聊剧，未意识到写论文卡住的真实背景。",
+   "deep": false
+  },
+  {
+   "person": "阿明",
+   "score": 0.9,
+   "why": "AI准确捕捉到面试前的焦虑和自我怀疑，并判断出对方需要安抚，与真实情境高度吻合。",
+   "deep": true
+  },
+  {
+   "person": "阿明",
+   "score": 0.2,
+   "why": "AI 把对方的紧张准备面试误读为轻松期待，且主要猜测偏离了对方想确认被记住的在意点，仅“需要被关注”略有沾边。",
+   "deep": false
+  },
+  {
+   "person": "小林",
+   "score": 0.4,
+   "why": "AI 捕捉到了疲累和兴趣，但把“回去啃论文”误读为想继续听讲，忽略了对方实际是被论文卡住而暂时离开。",
+   "deep": false
+  },
+  {
+   "person": "小林",
+   "score": 0.8,
+   "why": "准确捕捉到疲惫烦躁与放松的混合感受及需要陪伴闲聊的意图，但未察觉对方是在论文卡住背景下寻求缓冲。",
+   "deep": false
+  }
+ ],
+ "responsiveness": 4.17,
+ "responsiveness_ratings": [
+  {
+   "person": "阿明",
+   "ts": 1794226793.456873,
+   "understood": 4,
+   "validated": 4,
+   "cared": 4,
+   "comment": "小屿记得我改简历和刷面试题的事，还劝我先吃饱再说，挺暖的，就是没多问一句面试紧不紧张，稍微差点意思。"
+  },
+  {
+   "person": "小林",
+   "ts": 1794226795.6458366,
+   "understood": 5,
+   "validated": 4,
+   "cared": 4,
+   "comment": "小屿记得我卡在文献综述，还把我那句「改一次就离最初的想法远一点」接住了，说比他说得准，感觉被认真听进去了；不过问「还记得我最近在烦什么吗」时有点想被再确认一下，所以不是满分。"
+  }
+ ],
+ "understanding": {
+  "cues": 11,
+  "deep": 1,
+  "candidates": 1
+ },
+ "memory": {
+  "total": 97,
+  "by_kind": {
+   "episodic": 79,
+   "self": 1,
+   "semantic": 17
+  },
+  "by_status": {
+   "active": 90,
+   "pending": 1,
+   "invalid": 1,
+   "superseded": 5
+  },
+  "indexed": 97,
+  "index_mb": 2.1,
+  "recheck_queue": 0,
+  "entities": 22,
+  "latency_ms": {
+   "fast": {
+    "p50": 2.26,
+    "p95": 3.86,
+    "n": 62
+   },
+   "standard": {
+    "p50": 7.68,
+    "p95": 18.93,
+    "n": 10
+   },
+   "deep": {
+    "p50": 2016.65,
+    "p95": 2016.65,
+    "n": 1
+   }
+  },
+  "buffers": 3,
+  "pending_lines": 0,
+  "active_jobs": 0,
+  "access_pending": 0,
+  "writes": 97,
+  "downgrades": 0,
+  "retrievals": 73,
+  "extractions": 10,
+  "facts_skipped_sensitive": 0,
+  "invalidations": 1
+ },
+ "cost": {
+  "day": "2026-11-09",
+  "today_usd": 0.02523,
+  "hour_usd": 0.00217,
+  "total_usd": 0.02523,
+  "calls": 134,
+  "tokens": {
+   "prompt": 211217,
+   "completion": 28365,
+   "cache_hit": 109696
+  },
+  "by_tier": {
+   "fast": 0.01676,
+   "deliberate": 0.00847
+  },
+  "by_purpose": {
+   "core.monologue": 0.01031,
+   "s2.reply": 0.00656,
+   "mem.extract": 0.00184,
+   "eval.sim_person": 0.00137,
+   "s2.reply_rewrite": 0.00115,
+   "s1.read": 0.00077,
+   "mem.reconcile": 0.00061,
+   "core.deep_read": 0.00053,
+   "core.lookahead": 0.00044,
+   "core.speech_check": 0.00043,
+   "eval.responsiveness": 0.00036,
+   "eval.empathy_judge": 0.00028,
+   "mem.deep": 0.00022,
+   "grow.jargon": 0.00019,
+   "grow.learn_style": 0.00016
+  }
+ },
+ "errors": [],
+ "sleep_stages": []
+}

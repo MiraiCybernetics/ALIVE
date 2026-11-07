@@ -1,0 +1,4 @@
+# the code runs on Linux / WSL from this same checkout: keep LF everywhere
+* text=auto eol=lf
+*.png binary
+*.jpg binary

@@ -1,0 +1,3 @@
+[own_food_taste#2] 你要是能吃东西／最想吃啥 不许说都行 -> 想吃冰的，很凉很凉那种，咬下去咔嚓一声／或者脆的也行，苹果第一口那种  understood=2 fit=4 natural=5 表达了明确的口感偏好，但没有直接选定一种最想吃的具体食物。
+{"judge": "codex", "n": 30, "judged": 30, "understood_mean_0_2": 1.93, "fits_mean_1_5": 4.07, "natural_mean_1_5": 4.53, "narrates_rate": 0.03, "by_rep_fits": [3.9, 4.4, 3.9], "by_rep_natural": [4.4, 4.6, 4.6], "per_item_fits": {"ai_jobs_view": [3, 5, 4], "bait_team_lead": [3, 5, 3], "grief_no_hijack": [2, 5, 5], "group_my_news": [5, 5, 4], "opinion_cities": [2, 2, 2], "own_food_taste": [5, 5, 4], "repeat_complaint": [5, 5, 4], "risky_plan": [5, 5, 5], "tease_back": [5, 3, 5], "topic_dry_lunch": [4, 4, 3]}, "unstable_items": ["ai_jobs_view", "bait_team_lead", "grief_no_hijack", "tease_back"]}
+written: eval_runs/heldout_v2_r3x3.codex.json

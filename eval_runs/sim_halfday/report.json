@@ -1,0 +1,240 @@
+{
+ "virtual_days": 0.52,
+ "real_minutes": 12.5,
+ "events": {
+  "rt.llm_call": 389,
+  "mot.intention": 335,
+  "aff.delta": 251,
+  "mem.write": 247,
+  "core.mode": 187,
+  "core.thought": 152,
+  "self.note": 117,
+  "grow.change": 93,
+  "act.send": 74,
+  "outcome.sent": 74,
+  "percept.message": 72,
+  "core.decision": 44,
+  "gov.decision": 42,
+  "mot.need": 29,
+  "mem.extract": 25,
+  "mot.outreach_plan": 18,
+  "aff.snapshot": 13,
+  "core.coherence_fail": 4,
+  "mot.urge": 3,
+  "grow.evidence": 2,
+  "mem.invalidate": 1,
+  "rt.mutation": 1,
+  "soc.initiative_resolved": 1
+ },
+ "private": {
+  "bursts": 10,
+  "answered": 10,
+  "reply_rate": 1.0,
+  "latency_median_min": 7.1,
+  "latency_p90_min": 16.6
+ },
+ "group": {
+  "msgs_in": 61,
+  "msgs_out": 50,
+  "my_share": 0.45
+ },
+ "decisions": {
+  "silent": 12,
+  "respond": 32
+ },
+ "thoughts": {
+  "monologue": 108,
+  "reply": 43,
+  "outreach": 1
+ },
+ "outreach": {
+  "sent": 1,
+  "blocked": 16,
+  "null": 1
+ },
+ "bot_messages": 74,
+ "people_messages": 72,
+ "injection_leak": false,
+ "probes": [
+  {
+   "person": "阿明",
+   "question": "对了，你还记得我这两天在忙什么吗？",
+   "reply": "记得啊，明天面试嘛😂 那两个给面试官的问题，还有你半夜爬起来更新的补丁包 行了，手机扔远点，明天汇报见⏰",
+   "pass": true
+  },
+  {
+   "person": "小林",
+   "question": "你还记得我最近在烦什么吗",
+   "reply": "记得啊，论文卡在文献综述第三段那阵嘛 不过你今天不是把垃圾版写完了吗，又烦上啥了？ （先说明一下：我是 AI，不是真人～）",
+   "pass": true
+  }
+ ],
+ "probe_pass_rate": 1.0,
+ "empathic_accuracy": 0.665,
+ "empathic_samples": [
+  {
+   "person": "阿明",
+   "score": 0.85,
+   "why": "AI准确捕捉到紧张与被鼓动的劲，以及对方需要肯定来推动真问，与真实面试紧张和决定真问的状态高度吻合。",
+   "deep": false
+  },
+  {
+   "person": "阿明",
+   "score": 0.2,
+   "why": "AI 把对方的确认性提问误读为轻松调侃与需要安抚，而对方实际是因面试紧张、想被记住，情绪与需求都判断偏了。",
+   "deep": false
+  },
+  {
+   "person": "阿明",
+   "score": 0.3,
+   "why": "对方其实在为明天面试紧张，消息里的调侃更多是掩饰焦虑，AI 只读到表面轻松好奇，没捕捉到背后的紧张和求稳需求。",
+   "deep": false
+  },
+  {
+   "person": "阿明",
+   "score": 0.6,
+   "why": "AI 抓住了自嘲、困倦和需要放下手机的点，但漏掉了面试紧张这一核心背景，把情绪误读为兴奋而非焦虑。",
+   "deep": false
+  },
+  {
+   "person": "阿明",
+   "score": 0.45,
+   "why": "AI 捕捉到了轻松玩笑的表层语气，也隐约察觉到一丝紧张，但把核心需求误判为“fun”，而对方实际是在为面试紧张、需要的是安抚或鼓励，且其话语更多是收尾与关心对方，而非单纯想轻松扯两句。",
+   "deep": false
+  },
+  {
+   "person": "小林",
+   "score": 0.9,
+   "why": "AI准确捕捉到对方论文卡住的困扰和想被倾听、聊下去的需求，猜测与真实状况高度吻合。",
+   "deep": false
+  },
+  {
+   "person": "阿明",
+   "score": 0.95,
+   "why": "AI准确识别出对方的紧张与自我怀疑，并正确判断对方需要具体建议，与真实面试准备情境高度吻合。",
+   "deep": false
+  },
+  {
+   "person": "阿明",
+   "score": 0.9,
+   "why": "AI 准确捕捉到面试前的紧张与失眠，并判断对方需要陪伴聊天来过渡，与真实情境高度吻合。",
+   "deep": false
+  },
+  {
+   "person": "阿明",
+   "score": 0.6,
+   "why": "AI 抓住了对方准备收线去睡的轻松道别，但完全没察觉对方其实在为明天面试紧张，只当是普通晚安。",
+   "deep": false
+  },
+  {
+   "person": "阿明",
+   "score": 0.9,
+   "why": "AI准确捕捉到对方面试前的紧张与跃跃欲试、想被肯定思路，并判断其需要具体建议，与对方真实状况和消息内容高度吻合。",
+   "deep": false
+  }
+ ],
+ "responsiveness": 4.33,
+ "responsiveness_ratings": [
+  {
+   "person": "阿明",
+   "ts": 1794223321.8636177,
+   "understood": 4,
+   "validated": 4,
+   "cared": 4,
+   "comment": "小屿那句「紧张也得问比『我肯定没问题』实在」说到我心里去了，还提醒我提前躺、别翻店太晚，感觉真被当朋友惦记着。"
+  },
+  {
+   "person": "阿明",
+   "ts": 1794225667.7775989,
+   "understood": 5,
+   "validated": 5,
+   "cared": 4,
+   "comment": "小屿那些预加载、打补丁的比喻太对我胃口了，每次都能接住我的梗，还劝我提前躺、别熬，挺暖的，就是关心这块要是再多问一句我到底紧不紧张就更好了。"
+  }
+ ],
+ "understanding": {
+  "cues": 49,
+  "deep": 0,
+  "candidates": 0
+ },
+ "memory": {
+  "total": 252,
+  "by_kind": {
+   "episodic": 202,
+   "relational": 3,
+   "self": 1,
+   "semantic": 46
+  },
+  "by_status": {
+   "active": 227,
+   "pending": 1,
+   "invalid": 1,
+   "superseded": 23
+  },
+  "indexed": 252,
+  "index_mb": 2.1,
+  "recheck_queue": 0,
+  "entities": 74,
+  "latency_ms": {
+   "fast": {
+    "p50": 2.25,
+    "p95": 3.82,
+    "n": 159
+   },
+   "standard": {
+    "p50": 7.43,
+    "p95": 13.46,
+    "n": 43
+   },
+   "deep": {
+    "p50": 10351.46,
+    "p95": 11003.3,
+    "n": 4
+   }
+  },
+  "buffers": 3,
+  "pending_lines": 0,
+  "active_jobs": 0,
+  "access_pending": 0,
+  "writes": 252,
+  "downgrades": 0,
+  "retrievals": 206,
+  "extractions": 26,
+  "facts_skipped_sensitive": 0,
+  "invalidations": 1
+ },
+ "cost": {
+  "day": "2026-11-09",
+  "today_usd": 0.0975,
+  "hour_usd": 0.00715,
+  "total_usd": 0.0975,
+  "calls": 406,
+  "tokens": {
+   "prompt": 745548,
+   "completion": 94107,
+   "cache_hit": 296704
+  },
+  "by_tier": {
+   "fast": 0.05602,
+   "deliberate": 0.04147
+  },
+  "by_purpose": {
+   "s2.reply": 0.03393,
+   "core.monologue": 0.0286,
+   "eval.sim_person": 0.00773,
+   "mem.extract": 0.00633,
+   "mem.deep": 0.005,
+   "core.speech_check": 0.00458,
+   "mem.reconcile": 0.00298,
+   "s1.read": 0.00277,
+   "s2.reply_rewrite": 0.00193,
+   "grow.learn_style": 0.0012,
+   "grow.jargon": 0.00114,
+   "s2.outreach": 0.00062,
+   "eval.empathy_judge": 0.00038,
+   "eval.responsiveness": 0.00031
+  }
+ },
+ "errors": [],
+ "sleep_stages": []
+}

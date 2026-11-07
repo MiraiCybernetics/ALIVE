@@ -1,0 +1,2 @@
+{"judge": "codex", "n": 21, "judged": 21, "understood_mean_0_2": 1.95, "fits_mean_1_5": 4.29, "natural_mean_1_5": 4.43, "narrates_rate": 0.0, "by_rep_fits": [3.71, 4.43, 4.71], "by_rep_natural": [4.0, 4.57, 4.71], "per_item_fits": {"ai_jobs_view": [4, 4, 3], "grief_no_hijack": [4, 5, 5], "group_my_news": [2, 2, 5], "own_food_taste": [3, 5, 5], "risky_plan": [5, 5, 5], "tease_back": [5, 5, 5], "topic_dry_lunch": [3, 5, 5]}, "unstable_items": ["group_my_news", "own_food_taste", "topic_dry_lunch"]}
+written: eval_runs/heldout_v2_r4x3.codex.json
