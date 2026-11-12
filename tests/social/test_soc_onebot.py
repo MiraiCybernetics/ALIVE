@@ -190,3 +190,12 @@ async def test_wrong_token_is_rejected_and_retried(tmp_path, napcat):
         assert not any(napcat.auth) and not k.social.adapter("qq").connected
     finally:
         await k.stop()
+
+
+def test_backoff_overflow_prevention():
+    from alive.social.channels.base import Backoff
+    b = Backoff(base=1.0, cap=60.0)
+    for _ in range(2000):
+        val = b.next()
+        assert 0.0 <= val <= 60.0
+
