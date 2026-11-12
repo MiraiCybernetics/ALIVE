@@ -55,8 +55,9 @@ class Backoff:
         self.rng = rng or random.Random()
 
     def next(self) -> float:
-        d = min(self.cap, self.base * (2 ** self.n))
-        self.n += 1
+        d = min(self.cap, self.base * (2 ** min(self.n, 30)))
+        if self.n < 30:
+            self.n += 1
         return d * (0.5 + 0.5 * self.rng.random())
 
     def reset(self) -> None:
